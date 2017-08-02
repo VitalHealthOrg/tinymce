@@ -45,6 +45,7 @@ define(
 
     var normalizeFontFamily = function (fontFamily) {
       // 'Font name', Font -> Font name,Font
+      if (typeof fontFamily !== 'string') return '';
       return fontFamily.replace(/[\'\"]/g, '').replace(/,\s+/g, ',');
     };
 
