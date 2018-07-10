@@ -5,8 +5,10 @@ tmp
 .idea
 .project
 .vscode
+.nyc_output
 *.sublime-*
 .externalToolBuilders
+**/bolt/bootstrap*.js
 *~
 *.diff
 *.patch
@@ -14,8 +16,10 @@ tmp
 *.log
 *.swp
 yarn.lock
+package-lock.json
 .DS_Store
 .project
+coverage
 node_modules
 js/**/*
 imagemanager
@@ -31,8 +35,9 @@ mentions
 *.full.js
 *.min.css
 *.dev.less
-**/bolt/bootstrap*.js
 **/dist
 **/scratch
 **/lib
 **/dependency
+**/instrumented_*
+.rpt2_cache

@@ -1,41 +1,62 @@
 {
   "name": "tinymce",
-  "version": "4.6.4",
+  "version": "4.8.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/tinymce/tinymce.git"
   },
   "description": "TinyMCE rich text editor",
-  "author": "Johan Sörlin <spocke@moxiecode.com>",
+  "author": "Ephox Corporation",
   "bugs": {
-    "url": "http://www.tinymce.com/develop/bugtracker.php"
+    "url": "https://github.com/tinymce/tinymce/issues"
   },
+  "license": "LGPL-2.1",
   "private": true,
   "engines": {
     "node": ">=0.10.26"
   },
   "scripts": {
-    "test": "grunt bedrock-manual"
+    "test": "grunt bedrock-auto:chrome-headless",
+    "lint": "tslint src/**/*.ts",
+    "postinstall": "rimraf node_modules/@ephox/alloy/node_modules"
   },
   "dependencies": {
-    "@ephox/katamari": "^1.1.0",
-    "@ephox/sugar": "^3.1.0"
+    "@ephox/alloy": "2.2.3",
+    "@ephox/boulder": "3.2.1",
+    "@ephox/darwin": "latest",
+    "@ephox/dom-globals": "latest",
+    "@ephox/imagetools": "latest",
+    "@ephox/katamari": "latest",
+    "@ephox/robin": "latest",
+    "@ephox/sand": "latest",
+    "@ephox/snooker": "latest",
+    "@ephox/sugar": "latest"
   },
   "devDependencies": {
-    "@ephox/bolt": "^1.6.0",
-    "@ephox/imagetools": "2.0.0",
-    "@ephox/mcagar": "^1.1.1",
-    "@ephox/bedrock": "^1.5.0",
-    "grunt": "~1.0.1",
-    "grunt-contrib-clean": "~1.0.0",
+    "@ephox/agar": "latest",
+    "@ephox/bedrock": "latest",
+    "@ephox/mcagar": "latest",
+    "@ephox/swag": "latest",
+    "awesome-typescript-loader": "^5.0.0",
+    "grunt": "~1.0.2",
+    "grunt-contrib-clean": "~1.1.0",
     "grunt-contrib-copy": "~1.0.0",
-    "grunt-contrib-less": "~1.4.0",
-    "grunt-contrib-uglify": "~2.0.0",
-    "grunt-contrib-watch": "~1.0.0",
-    "grunt-eslint": "~19.0.0",
+    "grunt-contrib-less": "~1.4.1",
+    "grunt-contrib-uglify": "~3.3.0",
+    "grunt-contrib-watch": "^1.1.0",
     "grunt-nuget-pack": "^0.0.6",
-    "jquery": "~1.11.3",
-    "load-grunt-tasks": "~3.5.2",
-    "moxie-zip": "~0.0.3"
+    "grunt-replace": "^1.0.1",
+    "grunt-shell": "^2.1.0",
+    "grunt-tslint": "^5.0.1",
+    "grunt-webpack": "^3.1.2",
+    "less-plugin-autoprefix": "^1.5.1",
+    "load-grunt-tasks": "^4.0.0",
+    "moxie-zip": "~0.0.3",
+    "tslint": "^5.9.1",
+    "typescript": "^2.6.2",
+    "webpack": "^4.8.3",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-livereload-plugin": "^2.1.1",
+    "rimraf": "^2.6.2"
   }
 }
